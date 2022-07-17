@@ -9,7 +9,7 @@
                         <tr>
                             <th>#</th>
                             <th>Permission</th>
-                            <th>Aksi</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -20,7 +20,7 @@
                                 <td>
                                     <x-button-modal :id="$permission->id" title="" icon="edit" style=""
                                         class="btn btn-info btn-sm" />
-                                    <x-modal :id="$permission->id" title="Ubah Data">
+                                    <x-modal :id="$permission->id" title="Update Permission">
                                         <form action="{{ route('admin.permission.update', $permission->id) }}"
                                             method="POST">
                                             @csrf
@@ -46,7 +46,7 @@
                     @csrf
                     <x-input title="Permission name" name="name" type="text" placeholder="Input permission name"
                         :value="old('name')" />
-                    <x-button-save title="Crate Permission" icon="plus-circle" />
+                    <x-button-save title="Create Permission" icon="plus-circle" />
                 </form>
             </x-card>
         </div>

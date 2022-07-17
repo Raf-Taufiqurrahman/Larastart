@@ -74,7 +74,7 @@
                 </li>
                 <div class="hr-text hr-text-left ml-2 mb-2 mt-3">User Management</div>
                 <li class="nav-item">
-                    <a class="nav-link {{ Route::is('admin.permissions*') ? 'active' : '' }}"
+                    <a class="nav-link {{ Route::is('admin.permission*') ? 'active' : '' }}"
                         href="{{ route('admin.permission.index') }}">
                         <span class="nav-link-icon d-md-none d-lg-inline-block mr-1">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-lock"
@@ -90,6 +90,25 @@
                         </span>
                         <span class="nav-link-title">
                             Permission
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::is('admin.role*') ? 'active' : '' }}"
+                        href="{{ route('admin.role.index') }}">
+                        <span class="nav-link-icon d-md-none d-lg-inline-block mr-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-key"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <circle cx="8" cy="15" r="4"></circle>
+                                <line x1="10.85" y1="12.15" x2="19" y2="4"></line>
+                                <line x1="18" y1="5" x2="20" y2="7"></line>
+                                <line x1="15" y1="8" x2="17" y2="10"></line>
+                            </svg>
+                        </span>
+                        <span class="nav-link-title">
+                            Role
                         </span>
                     </a>
                 </li>

@@ -27,6 +27,7 @@
         rel="stylesheet">
     <link href="{{ asset('dist/css/tabler.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('dist/css/demo.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('dist/libs/selectize/dist/css/selectize.css') }}" rel="stylesheet" />
     @stack('css')
 </head>
 
@@ -87,6 +88,14 @@
                 }
             })
         }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#select-tags-advanced').selectize({
+                maxItems: 20,
+                plugins: ['remove_button'],
+            });
+        });
     </script>
     @stack('js')
 </body>
