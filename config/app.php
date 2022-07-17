@@ -187,6 +187,7 @@ return [
          */
         App\Providers\FortifyServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
         /*
          * Application Service Providers...
          */

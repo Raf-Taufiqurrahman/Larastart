@@ -6,7 +6,6 @@
         <a href="/" class="navbar-brand navbar-brand-autodark">
             <h2 class="font-weight-bold">
                 LaraStarter
-
             </h2>
         </a>
         <div class="navbar-nav flex-row d-lg-none">
@@ -35,7 +34,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
+                        document.getElementById('logout-form').submit();">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon dropdown-item-icon" width="24"
                             height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -74,6 +73,26 @@
                     </a>
                 </li>
                 <div class="hr-text hr-text-left ml-2 mb-2 mt-3">User Management</div>
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::is('admin.permissions*') ? 'active' : '' }}"
+                        href="{{ route('admin.permission.index') }}">
+                        <span class="nav-link-icon d-md-none d-lg-inline-block mr-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-lock"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3">
+                                </path>
+                                <circle cx="12" cy="11" r="1"></circle>
+                                <line x1="12" y1="12" x2="12" y2="14.5"></line>
+                            </svg>
+                        </span>
+                        <span class="nav-link-title">
+                            Permission
+                        </span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
