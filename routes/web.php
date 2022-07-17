@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
 
@@ -23,6 +24,7 @@ Route::get('/', function () {
 
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' =>['auth']], function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
-    Route::resource('/permission', PermissionController::class);
-    Route::resource('/role', RoleController::class);
+    Route::resource('/permission', PermissionController::class)->except(['create', 'edit', 'show']);
+    Route::resource('/role', RoleController::class)->except(['create', 'edit', 'show']);
+    Route::resource('/user', UserController::class)->except(['create', 'edit', 'show']);
 });
