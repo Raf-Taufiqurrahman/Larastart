@@ -26,5 +26,5 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' =>['auth']], f
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
     Route::resource('/permission', PermissionController::class)->except(['create', 'edit', 'show']);
     Route::resource('/role', RoleController::class)->except(['create', 'edit', 'show']);
-    Route::resource('/user', UserController::class)->except(['create', 'edit', 'show']);
+    Route::resource('/user', UserController::class)->only(['index', 'update']);
 });
